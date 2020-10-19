@@ -1,14 +1,34 @@
 <html>
+<style>
+  html { 
+    font-family: "Arial";
+  }
+  </style>
   <head>
     <title>potin n°<%= index %></title>
   </head>
+
   <body>
+
     <h1>PAGE POTIN</h1>
     <h2>Voici la page du potin n°<%= index %></h2>
     <h3>Son auteur : <%= gossip.author %></h3>
     <p>Le contenu du potin : <%= gossip.content %></p>
     <p><a href="/gossips/<%= index %>/edit/">Editer le potin</a></p>
-     <h2><a href="/gossips/new/">Revenir à la page des potins</a></h2>
+
+    <h3>Commentaires :</h3>    
+    <% comments.each do |comment| %>
+    <p>Comment n°<%= index %> :<br/><%= comment.content %><br/></p>
+     <% end %>
+
+     <form action='/gossips/<%= index %>/' method='POST'>
+      Ajoute un commentaire :  
+      <input type='text' name='gossip_comment'/>
+      <input type='submit'/>
+    </form>
+
+     <h3><a href="/">Revenir à la page des potins</a></h3>
+
   </body>
 </html>
   

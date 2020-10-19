@@ -3,8 +3,6 @@
   <style>
   html { 
     font-family: "Arial";
-    margin: 0;
-    padding: 0;
   }
 
   </style>
@@ -12,13 +10,10 @@
   </head>
 
 
-
-
   <body>
     <h1>Les potins THP !</h1>
     <h3><a href="/gossips/new/">Pour créer un potin, c'est ici! </a></h3>
     <h2>Voici la liste des potins :</h2>
-    <ul>
     <ul>
       <% gossips.each_with_index do |gossip, index| %>
         <p>
@@ -27,7 +22,6 @@
           <span>par <%= gossip.author%></span>
         </p>
       <% end %>
-    </ul>
-      </ul>
+    </ul>     
   </body>
 </html>

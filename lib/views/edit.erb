@@ -1,11 +1,16 @@
 <html>
+<style>
+  html { 
+    font-family: "Arial";
+  }
+  </style>
   <head>
     <title>Modifier un potin</title>
   </head>
   <body>
     <h1>Modification du potin n°<%=index%>!</h1>
     <p>Modifie ton potin via le formulaire ci-dessous</p>
-    <form action='/gossips/new/' method='POST'>
+    <form action='/gossips/<%= index %>/edit/' method='POST'>
       Modifie l'auteur :  <input type='text' name='gossip_author'/><br/>
       Modifie le potin : <input type='text' name='gossip_content'/><br/>
       <input type='submit'/>

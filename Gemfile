@@ -6,4 +6,5 @@ gem 'rubocop'
 gem 'sinatra'
 gem 'shotgun'
 gem 'csv'
+gem 'htmlbeautifier', group: :development
 gem 'solargraph', group: :development
