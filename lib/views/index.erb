@@ -1,0 +1,33 @@
+<html >
+  <head>
+  <style>
+  html { 
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+  }
+
+  </style>
+    <title>The Gossip Project</title>
+  </head>
+
+
+
+
+  <body>
+    <h1>Les potins THP !</h1>
+    <h3><a href="/gossips/new/">Pour créer un potin, c'est ici! </a></h3>
+    <h2>Voici la liste des potins :</h2>
+    <ul>
+    <ul>
+      <% gossips.each_with_index do |gossip, index| %>
+        <p>
+          <%= id = index+1 %>
+          <a href="/gossips/<%=id%>/"><strong><%= gossip.content%><br /></strong></a>
+          <span>par <%= gossip.author%></span>
+        </p>
+      <% end %>
+    </ul>
+      </ul>
+  </body>
+</html>
