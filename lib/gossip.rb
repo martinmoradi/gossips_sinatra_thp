@@ -24,7 +24,7 @@ class Gossip
 
   # trouver une instance par id
   def self.find(id)
-    all[id - 1]
+    self.all[id - 1]
   end
 
   # éditer un potin

@@ -17,8 +17,8 @@
     <p><a href="/gossips/<%= index %>/edit/">Editer le potin</a></p>
 
     <h3>Commentaires :</h3>    
-    <% comments.each do |comment| %>
-    <p>Comment n°<%= index %> :<br/><%= comment.content %><br/></p>
+    <% comments.each.with_index do |comment, idx| %>
+    <p>Comment n°<%= idx+1 %> :<br/><%= comment[1] %><br/></p>
      <% end %>
 
      <form action='/gossips/<%= index %>/' method='POST'>
